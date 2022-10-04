@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class BankMenu {
+
+	public static void main(String[] args) {
+	int menu = 0;
+		
+	System.out.println("What do you want to do? \n(1) Create a new account \n(2) Credit an account (Deposit)\n(3) Debit an account (Withdrawal)\n(4) Transfer from an account to another\n(5) Display the balance of an account\n(6) Exit the menu  ");
+	
+	Scanner sc = new Scanner(System.in);
+	while(menu != 1 && menu !=2 && menu !=3 && menu !=4 && menu !=5 && menu !=6) {
+		int answer = sc.nextInt();
+		menu = answer;
+		if (menu != 1 && menu !=2 && menu !=3 && menu !=4 && menu !=5 && menu !=6) {
+			System.out.println("Please select an entry from the menu");
+		}
+	}	
+	
+	if (menu == 1) {
+		System.out.println("Creating a new account");
+		Account account1 = new Account(null, null, menu, menu, menu, menu);
+	
+	if (menu == 2) {
+		System.out.println("Crediting an account");
+	}
+	
+	if (menu == 3) {
+		System.out.println("Depositing an account");
+	}
+	
+	if (menu == 4) {
+		System.out.println("Transfering");
+	}
+	
+	if (menu == 5) {
+		System.out.println("Displaying");
+	}
+	
+	if (menu == 6) {
+		System.out.println("Exiting");
+	}
+	}
+
+}
