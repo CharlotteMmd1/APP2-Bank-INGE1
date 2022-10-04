@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Account {
+	private String fname;
+	private String lname;
+	private double balance;
+	private double maxoverdraft;
+	private double maxdeposit;
+	private int id;
+	
+	public Account(String fname, String lname, double balance, double maxoverdraft, double maxdeposit,int id) {
+		System.out.println("What is your First Name?");
+		Scanner sc = new Scanner(System.in);
+		String fn = sc.next();
+		sc.close();
+		this.fname = fn;
+		System.out.println("What is your First Name?");
+		Scanner sc = new Scanner(System.in);
+		String ln = sc.next();
+		sc.close();
+		this.lname = lname;
+		this.balance = balance;
+		this.maxoverdraft = maxoverdraft;
+		this.maxdeposit = maxdeposit;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	public double getMaxoverdraft() {
+		return maxoverdraft;
+	}
+
+	public void setMaxoverdraft(double maxoverdraft) {
+		this.maxoverdraft = maxoverdraft;
+	}
+
+	public double getMaxdeposit() {
+		return maxdeposit;
+	}
+
+	public void setMaxdeposit(double maxdeposit) {
+		this.maxdeposit = maxdeposit;
+	}
+
+}
+	
