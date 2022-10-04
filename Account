@@ -8,20 +8,20 @@ public class Account {
 	private double maxdeposit;
 	private int id;
 	
-	public Account(String fname, String lname, double balance, double maxoverdraft, double maxdeposit,int id) {
+	public Account() {
 		System.out.println("What is your First Name?");
-		Scanner sc = new Scanner(System.in);
-		String fn = sc.next();
-		sc.close();
+		Scanner sc1 = new Scanner(System.in);
+		String fn = sc1.next();
 		this.fname = fn;
-		System.out.println("What is your First Name?");
-		Scanner sc = new Scanner(System.in);
-		String ln = sc.next();
-		sc.close();
-		this.lname = lname;
-		this.balance = balance;
-		this.maxoverdraft = maxoverdraft;
-		this.maxdeposit = maxdeposit;
+		System.out.println("What is your Last Name?");
+		Scanner sc2 = new Scanner(System.in);
+		String ln = sc2.next();
+		this.lname = ln;
+		this.balance = 0;
+		this.maxoverdraft = 0.1f;
+		this.maxdeposit = 200_000;
+		sc1.close();
+		sc2.close();
 	}
 
 	public String getFname() {
@@ -33,6 +33,42 @@ public class Account {
 	}
 
 	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	public double getMaxoverdraft() {
+		return maxoverdraft;
+	}
+
+	public void setMaxoverdraft(double maxoverdraft) {
+		this.maxoverdraft = maxoverdraft;
+	}
+
+	public double getMaxdeposit() {
+		return maxdeposit;
+	}
+
+	public void setMaxdeposit(double maxdeposit) {
+		this.maxdeposit = maxdeposit;
+	}
+
+}
+	
+	
+
+
 		return lname;
 	}
 
